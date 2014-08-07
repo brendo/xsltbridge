@@ -11,13 +11,13 @@
 
 namespace Thapp\XsltBridge;
 
-use Illuminate\View\Environment;
+use Illuminate\View\ViewServiceProvider;
+use Illuminate\View\Engines\EngineResolver;
+use Illuminate\View\Factory;
 use Illuminate\Support\Pluralizer;
 use Thapp\XmlBuilder\XmlBuilder;
 use Thapp\XsltBridge\Normalizer\EloquentAwareNormalizer as Normalizer;
 use Thapp\XsltBridge\Engines\XslEngine;
-use Illuminate\View\ViewServiceProvider;
-use Illuminate\View\Engines\EngineResolver;
 
 /**
  * Class: XsltServiceProvider
@@ -87,7 +87,6 @@ class XsltServiceProvider extends ViewServiceProvider
 
             $self->setPluralizer($builder);
             $self->setSingularizer($builder);
-
 
             $builder->setAttributeMapp($mappedAttributes);
             $builder->setEncoding($encoding);

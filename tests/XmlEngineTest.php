@@ -33,7 +33,7 @@ class XmlEngineTest extends \PHPUnit_Framework_TestCase
 
     public function provider()
     {
-        $file = __DIR__ . '/Fixures/test.xsl';
+        $file = __DIR__ . '/Fixtures/test.xsl';
 
         return array(
             array(
@@ -97,7 +97,7 @@ class XmlEngineTest extends \PHPUnit_Framework_TestCase
             $app = m::mock('alias:Illuminate\Foundation\Application');
         } catch (\Exception $e) {}
 
-        $builder   = m::mock('Thapp\XmlBuilder\XmlBuilder');
+        $builder = m::mock('Thapp\XmlBuilder\XmlBuilder');
 
         $builder->shouldReceive('load')->atMost(1);
         $builder->shouldReceive('createXML')->andReturn($xml);

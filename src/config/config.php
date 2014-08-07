@@ -60,7 +60,7 @@ return array(
     'normalizer' => array(
         'ignoredattributes' => array('env', 'app'),
         'ignoredobjects'    => array(
-            'Illuminate\Continer\Container',
+            'Illuminate\Container\Container',
         )
     ),
 
